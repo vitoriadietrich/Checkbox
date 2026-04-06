@@ -1,0 +1,100 @@
+/* Configurações de cores e fontes */
+:root {
+    --primary-purple: #6c5ce7;
+    --bg-card: #ffffff;
+    --switch-gray: #e6e6e6;
+    --text-gray: #b0b0b0;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--primary-purple);
+}
+
+/* Container Branco (Card) */
+.card {
+    background-color: var(--bg-card);
+    padding: 30px 45px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    min-width: 350px;
+}
+
+/* Estrutura do Interruptor */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Esconde o checkbox padrão */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* O trilho (fundo do toggle) */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--switch-gray);
+    transition: .4s;
+    border-radius: 40px;
+}
+
+/* O círculo (botão interno) */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 32px;
+    width: 32px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--white);
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Quando o checkbox está marcado (Checked) */
+input:checked + .slider {
+    background-color: var(--primary-purple);
+}
+
+input:checked + .slider:before {
+    transform: translateX(35px);
+}
+
+/* Estilo do Texto */
+.status-text {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--text-gray);
+    transition: color 0.4s;
+    user-select: none;
+}
+
+/* Classe auxiliar para mudar a cor do texto via JS */
+.text-active {
+    color: var(--primary-purple);
+}
