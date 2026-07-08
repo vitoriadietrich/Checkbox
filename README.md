@@ -2,22 +2,22 @@
 
 Um projeto simples de **checkbox personalizado e toggle switch** usando apenas HTML e CSS.
 
-## ✨ Sobre
+## Sobre
 
 Este projeto demonstra como criar **checkboxes customizados e switches on/off**, substituindo o estilo padrão por um design moderno.
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - HTML
 - CSS
 
-## 🎯 Funcionalidades
+## Funcionalidades
 
 - Checkbox estilizado
 - Toggle switch (ligar/desligar)
 - Design moderno e interativo
 
-## 🚀 Como usar
+## Como usar
 
 1. Baixe ou clone o repositório  
 2. Abra o arquivo `index.html` no navegador  
